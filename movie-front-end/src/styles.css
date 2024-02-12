@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import '~@angular/material/theming'; */
+
+:root {
+  --your-primary-color: #035496;  /* Replace with your actual primary color */
+  --your-accent-color: #e91414;   /* Replace with your actual accent color */
+  --your-warn-color: #FFC107;     /* Replace with your actual warn color */
+  --your-custom-color: #4CAF50;   /* Replace with your actual custom color */
+}
+
+html, body {
+  height: 100%;
+  background-color: black;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Define your custom theme */
+.mat-light-theme {
+  background: var(--your-primary-color);
+  color: var(--your-accent-color);
+}
+
+/* Apply the theme to the snackbar */
+.mat-snack-bar-container {
+  background-color: var(--your-custom-color);
+}
+.success-snackbar {
+  background-color: #0132b6; /* Green color for success */
+  color: #fff; /* White text */
+}
+
+.error-snackbar {
+  background-color: #e91414; /* Red color for error */
+  color: #fff; /* White text */
+}

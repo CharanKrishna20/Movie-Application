@@ -1,0 +1,135 @@
+.mat-card{
+  margin-top: 10px;
+  background-color: black;
+}
+.mat-column-showDescription {
+max-width: 130px; /* Set the maximum width as per your requirement */
+/* overflow: scroll; */
+text-overflow: ellipsis; /* Truncate text if it exceeds the maximum width */
+white-space: nowrap;
+}
+.mat-column-castAndCrew {
+max-width: 100px; /* Set the maximum width as per your requirement */
+/* overflow: scroll; */
+text-overflow: ellipsis; /* Truncate text if it exceeds the maximum width */
+white-space: nowrap;
+}
+.mat-column-tvShowId{
+max-width: 100px; /* Set the maximum width as per your requirement */
+/* overflow: hidden; */
+text-overflow: ellipsis; /* Truncate text if it exceeds the maximum width */
+white-space: nowrap;
+}
+.mat-column-showTitle{
+text-align: center;
+}
+.mat-column-trailerLink{
+max-width: 100px; 
+}
+.mat-column-showDirector{
+  max-width: 100px; 
+  }
+.mat-column-showWriters{
+max-width: 100px; 
+text-overflow: ellipsis; /* Truncate text if it exceeds the maximum width */
+white-space: nowrap;
+}
+.mat-column-streamingOn{
+max-width: 100px; 
+text-overflow: ellipsis; /* Truncate text if it exceeds the maximum width */
+white-space: nowrap;
+}
+.mat-column-genre{
+max-width: 100px; 
+}
+.mat-column-availableLanguages{
+max-width: 150px; 
+}  
+
+  mat-card-content {
+    padding: 16px;
+    max-width: 800px;
+    table {
+      max-width: 800px;
+      border-collapse: collapse;
+  
+      th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #2196F3;
+        color: #fff;
+      }
+
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+
+      button {
+        margin-right: 8px;
+      }
+
+      button[color="warn"] {
+        background-color: #FF5722;
+        color: #fff;
+        width: 10px;
+      }
+
+      button[color="primary"] {
+        background-color: #2196F3;
+        color: #fff;
+      }
+    }
+  }
+.buttons{
+  margin-left: 92px;
+  margin-right: 30px;
+  margin-top: 50px;
+}
+.mat-column-action{
+  /* display: inline-flex; */
+  width: 100px;
+  /* padding-bottom: 30px; */
+  /* margin-top: 20px; */
+}
+.action-button {
+  width: 30px; /* Set the desired width */
+  padding: 6px; /* Adjust padding as needed */
+  font-size: 14px; /* Adjust font size as needed */
+}
+.custom-button {
+  background-color: #2196F3;
+  color: white;
+  margin-right: 50px;
+
+}
+h2 {
+  color: #f05b16; /* Darker shade of #a28089 */
+  text-align: center;
+  margin-top: 100px;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 121, 107, 0.3); 
+  animation: fadeInUp 1s ease; 
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+app-movieadd {
+  margin: 16px;
+}
+.heading{
+  margin-bottom: -90px;
+}
+

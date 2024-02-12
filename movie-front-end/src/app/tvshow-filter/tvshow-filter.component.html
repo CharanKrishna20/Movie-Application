@@ -1,0 +1,9 @@
+<mat-chip-listbox aria-label="Genres">
+  <mat-chip-option
+    *ngFor="let tvgenre of tvShowGenres"
+   [ngClass]="{'mat-accent': tvShowSelectedGenres.includes(tvgenre)}"
+    (click)="tvShowSelectedGenre(tvgenre)"
+    color="accent" selected>
+    {{ tvgenre }} ({{getTvShowGenreCount(tvgenre)}})
+  </mat-chip-option>
+</mat-chip-listbox>

@@ -1,0 +1,88 @@
+<ng-container *ngIf="movie; else loadingTemplate">
+  <form (ngSubmit)="editMovie()"class="form">
+      <mat-label><h2>Edit movie</h2></mat-label>
+      <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Movie Id</mat-label>
+            <input matInput type="text" [value]="movie.movieId" name="movieId" disabled>
+          </mat-form-field>
+        </div>
+        
+      <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Movie Title</mat-label>
+              <input matInput type="text" [(ngModel)]="movie.movieTitle" name="movieTitle">
+          </mat-form-field>
+      </div>
+      <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Release Year</mat-label>
+            <input matInput type="text" [(ngModel)]="movie.releaseYear" name="releaseYear">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Genre</mat-label>
+            <input matInput type="text" [(ngModel)]="movie.genre" name="genre">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Movie Description</mat-label>
+            <textarea matInput type="text" [(ngModel)]="movie.movieDescription" name="movieDescription"></textarea>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Rating</mat-label>
+            <input matInput type="text" [(ngModel)]="movie.movieRating" name="movieRating">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Movie Director</mat-label>
+            <input matInput type="text" [(ngModel)]="movie.movieDirector" name="movieDirector">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Movie Writers</mat-label>
+            <input matInput type="text" [(ngModel)]="movie.movieWriters" name="movieWriters">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Trailer Link</mat-label>
+            <input matInput type="text" [(ngModel)]="movie.trailerLink" name="trailerLink">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Streaming On</mat-label>
+            <input matInput type="text" [(ngModel)]="movie.streamingOn" name="streamingOn">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Cast And Crew</mat-label>
+            <input matInput type="text" [(ngModel)]="movie.castAndCrew" name="castAndCrew">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Available Languages</mat-label>
+            <input matInput type="text" [(ngModel)]="movie.availableLanguages" name="availableLanguages">
+          </mat-form-field>
+        </div>
+        
+        <label for="file">Select Movie Poster:</label>
+        <input type="file" id="file" name="file" (change)="onFileChange($event)">
+  
+        <button mat-raised-button color="primary" type="submit">save</button>
+  
+  </form>
+  </ng-container>
+  
+  <ng-template #loadingTemplate>
+    <p>Loading...</p>
+  </ng-template> 

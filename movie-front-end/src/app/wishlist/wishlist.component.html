@@ -1,0 +1,37 @@
+
+<div *ngIf="wishlist" class="wishlist-container">
+<h2>My WatchList</h2>
+<div class="list-movies">
+    <mat-card *ngFor="let movie of wishlist" class="list-movie">
+      <div class="list-movie-details">
+        
+        <img id="picture" mat-card-image [src]="'http://localhost:8090/' + movie.movieImagePath" alt="{{ movie.movieTitle }}" class="movie-thumbnail">
+        <div class="list-data">
+          <strong>Movie Name:</strong>{{ movie.movieTitle }}  <br>
+          <strong>Description:</strong> {{ movie.movieDescription }} <br>
+          <strong>Rating:</strong> {{ movie.movieRating }} <br>
+        </div>
+        <button id="deletebtn" (click)="deleteItem(movie.movieId)"><mat-icon>delete</mat-icon> </button>
+        
+      </div>
+      <hr>
+    </mat-card>
+    <mat-card *ngFor="let tvshow of tvShowList" class="list-movie">
+      <div class="list-movie-details">
+        
+        <img id="picture" mat-card-image [src]="'http://localhost:8090/' + tvshow.showImagePath" alt="{{ tvshow.showDescription }}" class="movie-thumbnail">
+        <div class="list-data">
+          <strong>Tv Show Name:</strong>{{ tvshow.showTitle }}  <br>
+          <strong>Description:</strong> {{ tvshow.showDescription}} <br>
+          <strong>Rating:</strong> {{ tvshow.showRating }} <br>
+        </div>
+        <button id="deletebtn" (click)="deleteTvShowItem(tvshow.tvShowId)"><mat-icon>delete</mat-icon> </button>
+        
+      </div>
+      <hr>
+    </mat-card>
+  </div>
+  </div>
+  
+
+

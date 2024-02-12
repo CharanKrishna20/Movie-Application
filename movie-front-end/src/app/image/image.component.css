@@ -1,0 +1,76 @@
+/* .mat-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+img[mat-card-image] {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-card-content {
+  flex: 1;
+} */
+
+.mat-grid-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 80%; /* adjust this to control the number of cards per row */
+}
+
+.movie-card {
+  width: 60%; /* wider cards */
+  margin: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mat-card-image {
+  height: 300px; /* taller image for wider cards */
+  object-fit: cover;
+}
+
+.mat-card-content {
+  padding: 24px; /* more breathing room */
+  font-family: "Roboto", sans-serif; /* clean, modern font */
+  color: #333; /* darker text for better contrast */
+}
+
+.mat-card-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 18px; /* slightly larger title */
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+mat-icon {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+button.mat-button {
+  background-color: #F5F7FA; /* lighter background */
+  color: #3F51B5;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500; /* slightly bolder button text */
+}
+
+button.mat-button:hover {
+  background-color: #F2F3F4;
+}

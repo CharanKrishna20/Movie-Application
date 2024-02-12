@@ -1,0 +1,40 @@
+<div class="form-container">
+<form [formGroup]="tvShowForm" (ngSubmit)="onSubmit()" >
+    <label for="showTitle">Tv Show Title:</label>
+    <input type="text" id="showTitle" formControlName="showTitle" required>  
+    <label for="releaseYear">Release Year:</label>
+    <input type="text" id="releaseYear" formControlName="releaseYear" pattern="^[0-9]{4}$" required>
+  
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" formControlName="genre" required>
+  
+    <label for="showDescription">Description:</label>
+    <textarea id="showDescription" formControlName="showDescription" required></textarea>
+  
+    <label for="showRating">rating:</label>
+    <input type="text" id="showRating" formControlName="showRating" pattern="^[0-9](\.[0-9]{1,2})?$" required>
+
+    <label for="showDirector">Tv show Director:</label>
+    <input type="text" id="showDirector" formControlName="showDirector" required>
+
+    <label for="showWriters">show Writers:</label>
+    <input type="text" id="showWriters" formControlName="showWriters" required>
+
+    <label for="castAndCrew">cast And Crew:</label>
+    <input type="text" id="castAndCrew" formControlName="castAndCrew" required>
+
+    <label for="trailerLink">Trailer Link:</label>
+    <input type="text" id="trailerLink" formControlName="trailerLink" required>
+
+    <label for="streamingOn">streamingOn:</label>
+    <input type="text" id="streamingOn" formControlName="streamingOn" pattern="^[0-9](\.[0-9]{1,2})?$" required>
+    
+    <label for="availableLanguages">Available Languages:</label>
+    <input type="text" id="availableLanguages" formControlName="availableLanguages" required>
+  
+    <label for="showImagePath">Image :</label>
+    <input type="file" id="file" formControlName="showImagePath" (change)="onFileSelected($event)" required >
+  
+    <button   type="submit" mat-raised-button color="primary" >submit</button>
+  </form>
+</div>

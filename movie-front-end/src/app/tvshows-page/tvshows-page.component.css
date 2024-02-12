@@ -1,0 +1,51 @@
+/* Add this to your component's styles or global styles (styles.css) */
+.paginator{
+  background-color: black;
+  color: white;
+}
+.mat-paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .mat-paginator-range-label,
+  .mat-paginator-page-size-label {
+    margin-right: 10px;
+  }
+  
+  .mat-paginator-page-size {
+    margin-left: auto;
+  }
+  
+  .mat-paginator-navigation {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mat-paginator-navigation button {
+    margin: 0 5px;
+  }
+  
+  /* Optional: Adjust the color scheme to match your application */
+  .mat-paginator-page-size, .mat-paginator-range-label, .mat-paginator-page-size-label {
+    color: #333; /* Text color */
+  }
+  
+  .mat-paginator-page-size-options {
+    color: #333; /* Text color for the page size options */
+  }
+  
+  .mat-paginator-page-size-options .mat-option {
+    color: #333; /* Text color for the selected page size option */
+  }
+  
+  .mat-paginator-navigation button {
+    color: #007bff; /* Button color */
+  }
+  
+  .mat-paginator-navigation button:hover {
+    background-color: #f0f0f0; /* Hover background color */
+  }
+  

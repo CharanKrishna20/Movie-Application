@@ -1,0 +1,148 @@
+.login-form {
+  margin: 100px auto;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  background:navy;
+  padding: 0px; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; 
+  margin-bottom: 10px;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.mat-form-field input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.password {
+  text-align: right;
+  font-size: 12px;
+  color:navajowhite;
+  margin-bottom: 10px;
+}
+
+.mat-raised-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mat-raised-button:hover {
+  background-color: #444;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+.mat-card {
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.mat-form-field.ng-invalid {
+  animation: shake 0.2s ease-in-out;
+}
+.mat-card {
+  @keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.7); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  animation: zoomIn 0.5s ease-in-out;
+}
+.mat-form-field:focus-within {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+.mat-raised-button:active {
+  animation: bounce 0.2s ease-in-out;
+}
+.mat-raised-button:hover {
+  animation: buttonPulse 0.5s ease-in-out;
+}
+
+@keyframes buttonPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+@media (max-width: 768px) {
+  .login-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    to {
+      opacity: 1;
+      transform: scale(2);
+    }
+  }
+
+}
+
+
+

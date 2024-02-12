@@ -1,0 +1,44 @@
+.add-review-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-review-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.review-textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    resize: none; /* Disable textarea resizing */
+}
+
+.submit-review-button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: #4CAF50; /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-review-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.submit-review-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

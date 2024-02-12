@@ -1,0 +1,40 @@
+<div class="form-container">
+  <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+      <label for="movieTitle">Movie Title:</label>
+      <input type="text" id="movieTitle" formControlName="movieTitle" required>  
+      <label for="releaseYear">Release Year:</label>
+      <input type="text" id="releaseYear" formControlName="releaseYear" pattern="^[0-9]{4}$" required>
+    
+      <label for="genre">Genre:</label>
+      <input type="text" id="genre" formControlName="genre" required>
+    
+      <label for="movieDescription">Description:</label>
+      <textarea id="movieDescription" formControlName="movieDescription" required></textarea>
+    
+      <label for="movieRating">Rating:</label>
+      <input type="text" id="movieRating" formControlName="movieRating" pattern="^[0-9](\.[0-9]{1,2})?$" required>
+  
+      <label for="movieDirector">Director:</label>
+      <input type="text" id="movieDirector" formControlName="movieDirector" required>
+  
+      <label for="movieWriters">Writers:</label>
+      <input type="text" id="movieWriters" formControlName="movieWriters" required>
+  
+      <label for="trailerLink">Trailer link:</label>
+      <input type="text" id="trailerLink" formControlName="trailerLink" required>
+  
+      <label for="castAndCrew">cast And Crew:</label>
+      <input type="text" id="castAndCrew" formControlName="castAndCrew" required>
+  
+      <label for="availableLanguages">Available Languages:</label>
+      <input type="text" id="availableLanguages" formControlName="availableLanguages" required>
+      
+      <label for="streamingOn">streamingOn:</label>
+      <input type="text" id="streamingOn" formControlName="streamingOn" pattern="^[0-9](\.[0-9]{1,2})?$" required>
+    
+      <label for="movieImagePath">Image Path:</label>
+      <input type="file" id="file" formControlName="movieImagePath" (change)="onFileSelected($event)" required>
+    
+      <button   type="submit" mat-raised-button color="primary" >submit</button>
+    </form>
+  </div>

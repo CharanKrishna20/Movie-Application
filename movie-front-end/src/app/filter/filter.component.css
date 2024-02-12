@@ -1,0 +1,33 @@
+.filter{
+  display: inline-flex;
+  max-width: 100px;
+  width: 300px;
+  margin-top: 10px; 
+}
+
+
+mat-form-field {
+  width: 100%; 
+}
+
+
+mat-label {
+  color: #333; 
+}
+
+
+mat-select {
+  width: 100%; 
+  
+  border-radius: 10px; 
+  
+}
+
+mat-option {
+  color: #333; 
+}
+
+
+mat-select-value {
+  color: #333; 
+}

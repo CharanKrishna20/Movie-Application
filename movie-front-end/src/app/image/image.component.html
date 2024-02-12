@@ -1,0 +1,52 @@
+<<<<<<< HEAD
+ <!-- <mat-grid-list cols="3" gutterSize="16px">
+
+<!-- <div *ngFor="let movie of movies" >
+  <h2>{{ movie.movieTitle }}</h2>
+  <p>Release Year: {{ movie.releaseYear }}</p>
+  <p>Genre: {{ movie.genre }}</p>
+  <p>Description: {{ movie.movieDescription }}</p>
+  <p>Rating: {{ movie.movieRating }}</p>
+  <p>Concatenated URL: {{ 'http://localhost:8090/' + movie.movieImagePath }}</p>
+  <img [src]="'http://localhost:8090/' + movie.movieImagePath">
+
+  <mat-icon><a [routerLink]="['/movie-edit',movie!.movieId]" >
+    edit
+  </a>
+</mat-icon>
+
+ 
+  <button *ngIf="movie.movieId" (click)="deleteMovie(movie.movieId)">Delete</button>
+</div> -->
+
+<!-- 
+ <mat-grid-list cols="3" gutterSize="16px">
+
+  <mat-grid-tile *ngFor="let movie of movies">
+    <mat-card class="movie-card">
+      <img mat-card-image [src]="'http://localhost:8090/' + movie.movieImagePath" alt="{{ movie.movieTitle }}">
+      <mat-card-content>
+        <mat-card-title>{{ movie.movieTitle }}</mat-card-title>
+        <p><strong>Release Year:</strong> {{ movie.releaseYear }}</p>
+        <p><strong>Genre:</strong> {{ movie.genre }}</p>
+        <p><strong>Description:</strong> {{ movie.movieDescription }}</p>
+        <p><strong>Rating:</strong> {{ movie.movieRating }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button [routerLink]="['/movie-edit', movie.movieId]" [queryParams]="{movieId:movie.movieId}">
+          <mat-icon>edit</mat-icon> Edit
+        </button>
+       
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>  -->
+
+<!-- <app-header></app-header> -->
+<!-- <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card> -->
+<!-- <app-footer></app-footer> -->
+
+
+
+
+  

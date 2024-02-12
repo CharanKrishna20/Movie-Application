@@ -1,0 +1,176 @@
+.tvshow-container{
+    display: flex;
+    max-width: 1500px;
+    margin: 30px;
+    margin-top: 100px;
+    border-radius: 4px;
+    overflow: hidden;
+    align-items: center;
+}
+#picture {
+    height:800px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    
+
+}
+mat-card {
+    flex: 2 2 ;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+mat-card:hover {
+    transform: scale(1.05);
+}
+mat-card-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    color:white;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color:white;
+    margin: 0;
+}
+h3 {
+    font-size: 2.5rem; 
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white; 
+}
+
+.orange-star::before {
+  content: '★';
+  color: orange;
+  
+}
+.icon-logo{
+  display: inline-flex;
+}
+.streaming-icon{
+  height: 100px;
+  width: 100px;
+ 
+}
+
+#trailer{
+
+  background-color: white;
+}
+
+.add-to-wishlist-button {
+  background-color: transparent;
+  
+  cursor: pointer;
+  color:white;
+  border: none;
+  /* min-height: 50vh; */
+  /* padding: 30px 50px; */
+  padding-left: 50px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+ 
+  &:hover {
+    transform: scale(1.1);
+  }
+
+ 
+  &:active {
+    animation: clickEffect 0.2s ease-in-out;
+  }
+}
+  
+  @keyframes clickEffect {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.info-label {
+    margin-right: 8px;
+}
+
+.info-label {
+  font-weight: bold;
+  font-size: 18px;
+  color: white; 
+  margin-right: 8px;
+}
+
+.add-review-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50; 
+  color: #fff; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-review-button:hover {
+  background-color: #45a049;
+}
+
+.add-review-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.download-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3912e6; 
+  color: #fff; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+  background-color: #3912e6;
+}
+
+.download-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Style for the iframe */
+.iframe {
+  margin-left: 200px;
+  border: 1px solid #ddd; /* Border color */
+  border-radius: 8px; /* Border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle shadow effect */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  margin-bottom: 16px; /* Adjust margin as needed */
+  width: 900px; /* Make the iframe fill its container width */
+
+}
+
+/* Optional: Add styling for responsive design */
+@media (max-width: 767px) {
+  .iframe {
+    width: 100%; /* Adjust width for smaller screens */
+    height: 300px; /* Adjust height for smaller screens */
+  }
+}
+

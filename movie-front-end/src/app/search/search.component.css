@@ -1,0 +1,43 @@
+/* Assuming you have a class named 'search' for styling the container */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+   margin-top: 130px; 
+}
+
+.input {
+  width: 300px;
+  margin-right: 10px; 
+  border-top-left-radius: 20px; /* Rounded corners on the left side */
+  border-bottom-left-radius: 20px;
+  
+}
+
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  background-color: rgb(82, 82, 105); 
+  color: #fff; 
+  margin-top: -25px;
+  transition: background-color 0.3s ease; 
+  height: 36px;
+  display: flex;
+  align-items: center;
+  &:hover {
+    background-color: #0056b3; 
+  }
+}
+
+
+mat-icon {
+  font-size: 24px;
+  margin-right: 5px; 
+  margin-top: -2px;
+ 
+}

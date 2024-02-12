@@ -1,0 +1,30 @@
+
+<div class="login-form" [@fadeInOut]>
+  <mat-card class="mat-card" (@pulse.done)="resetPulseAnimation()">
+    <mat-card-title class="title" (@bounce.start)="startPulseAnimation()">Login Here</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" formControlName="userEmailId" placeholder="Enter your  email" required>
+            <mat-error *ngIf="loginForm.get('userEmailId')?.hasError('required')">
+              Email is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" placeholder="Enter your password" required>
+            <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+          <button type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+        </form>
+        <a [routerLink]="['/forgot-password']">Forgot Password?</a>
+      </mat-card-content>
+      <p style="color: purple;" [@pulse]="pulseState">New here? <a [routerLink]="['/signup']">Let's get you started</a></p>
+    </mat-card>
+  </div>
+
+
+

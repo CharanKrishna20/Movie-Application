@@ -1,0 +1,32 @@
+<div class="profile-container">
+  <div class="profile-header">
+    <h2> Profile Details</h2>
+  </div>
+  <div class="profile-details">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" [(ngModel)]="user.userName" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="user.userEmailId" />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="user.password" />
+    </div>
+    <div class="form-group">
+      <label for="registeredDate">User Since</label>
+      <input type="text" id="registeredDate" name="registeredDate" [(ngModel)]="user.registeredDate" />
+    </div>
+
+    <ng-container *ngIf="!isUserSubscribed">
+      <!-- Show the image for subscribed users -->
+      <img class="prouser" src="../../assets/Pictures/Comparison chart.png">
+    </ng-container>
+
+    <div *ngIf="!isUserSubscribed" class="form-group">
+      <button routerLink="/payment-gateway">Get Premium</button>
+    </div>
+  </div>
+</div>

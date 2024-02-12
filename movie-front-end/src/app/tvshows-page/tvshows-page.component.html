@@ -1,0 +1,6 @@
+<app-search (searchEvent)="onSearch($event)"></app-search>
+<app-tvshow-filter (selectedTvShowGenresChange)="onSelectedTvGenre($event)"></app-tvshow-filter>
+<app-tv-show-card *ngFor="let tvShow of tvShows" [tvShow]="tvShow"></app-tv-show-card>
+<div class="text-centre" *ngIf="showLoadButton">
+    <button mat-button color="accent" (click)="loadMoreTvShows()">Load More</button>
+</div>

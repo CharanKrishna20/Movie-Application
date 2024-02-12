@@ -1,0 +1,94 @@
+<div class="heading">
+    <h2>Welcome To Admin DashBoard</h2>
+</div>
+<app-search (searchEvent)="onSearch($event)" class="search"></app-search>
+<ng-container *ngIf="showTvShowAdd">
+    <app-movieadd (TvShowAdded)="handleTvShowAdded()"></app-movieadd>
+  </ng-container>
+
+<div class="buttons">
+    <button class="custom-button" mat-raised-button style="background-color: #2196F3; color: white;" routerLink="/admin-dashboard">Back to movies </button>
+    <button class="custom-button" mat-raised-button style="background-color: #2196F3; color: white;" (click)="openDialog1()">Add Tv Shows</button>
+    <!-- <button class="custom-button" mat-raised-button style="background-color: #2196F3; color: white;"  (click)="users()">All Users</button> -->
+</div>
+
+ 
+
+
+<mat-card class="mat-card">
+    
+    <mat-card-content>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="tvShowId" class = "mat-column-tvShowId">
+                <th mat-header-cell *matHeaderCellDef>Tv Show Id</th>
+                <td mat-cell *matCellDef="let element">{{ element.tvShowId }}</td>
+            </ng-container>
+            <ng-container matColumnDef="showTitle" class = "mat-column-showTitle">
+                <th mat-header-cell *matHeaderCellDef>Tv Show Title</th>
+                <td mat-cell *matCellDef="let element">{{ element.showTitle }}</td>
+            </ng-container>
+            <ng-container matColumnDef="releaseYear">
+                <th mat-header-cell *matHeaderCellDef>Release Year</th>
+                <td mat-cell *matCellDef="let element">{{ element.releaseYear }}</td>
+            </ng-container>
+            <ng-container matColumnDef="genre">
+                <th mat-header-cell *matHeaderCellDef>Genre</th>
+                <td mat-cell *matCellDef="let element">{{ element.genre }}</td>
+            </ng-container>
+            <ng-container matColumnDef="showDescription" class="tvShow-description-column">
+                <th mat-header-cell *matHeaderCellDef>Tv Show Description</th>
+                <td mat-cell *matCellDef="let element">{{ element.showDescription}}</td>
+            </ng-container>
+            <ng-container matColumnDef="showRating">
+                <th mat-header-cell *matHeaderCellDef>Tv Show Rating</th>
+                <td mat-cell *matCellDef="let element">{{ element.showRating }}</td>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef>Action</th>
+                <td mat-cell *matCellDef="let element">
+                    <button  (click)="deleteTvShow(element.tvShowId)" mat-raised-button color="warn">
+                        <mat-icon>delete</mat-icon></button>
+                    <button (click)="openEditDialog(element)" mat-raised-button color="primary">
+                    <mat-icon>edit</mat-icon></button>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="showDirector">
+                <th mat-header-cell *matHeaderCellDef>Tv Show Director</th>
+                <td mat-cell *matCellDef="let element">{{ element.showDirector }}</td>
+            </ng-container>
+            <ng-container matColumnDef="showWriters">
+                <th mat-header-cell *matHeaderCellDef>Tv Show Writers</th>
+                <td mat-cell *matCellDef="let element">{{ element.showWriters }}</td>
+            </ng-container>
+            <ng-container matColumnDef="trailerLink">
+                <th mat-header-cell *matHeaderCellDef>Movie Trailer Link</th>
+                <td mat-cell *matCellDef="let element">{{ element.trailerLink }}</td>
+            </ng-container>
+            <ng-container matColumnDef="streamingOn">
+                <th mat-header-cell *matHeaderCellDef>Movie Streaming On</th>
+                <td mat-cell *matCellDef="let element">{{ element.streamingOn }}</td>
+            </ng-container>
+            <ng-container matColumnDef="castAndCrew">
+                <th mat-header-cell *matHeaderCellDef>Movie Cast And Crew</th>
+                <td mat-cell *matCellDef="let element">{{ element.castAndCrew }}</td>
+            </ng-container>
+            <ng-container matColumnDef="availableLanguages">
+                <th mat-header-cell *matHeaderCellDef>Movie Available Languages</th>
+                <td mat-cell *matCellDef="let element">{{ element.availableLanguages }}</td>
+            </ng-container>
+           
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            
+
+        </table>
+        
+    </mat-card-content>
+    <mat-card-footer>
+        <mat-paginator [length]="totalTvShows" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChange($event)" class="paginator">
+        </mat-paginator>
+    </mat-card-footer>
+</mat-card>
+
+
+

@@ -1,0 +1,9 @@
+<div class="search">
+  <mat-form-field class="input" appearance="fill">
+    <mat-label>Search Movies </mat-label>
+    <input matInput type="text" [(ngModel)]="searchText">
+  </mat-form-field>
+  <button mat-icon-button (click)="search()"> 
+    <mat-icon>search</mat-icon>
+  </button>
+</div>

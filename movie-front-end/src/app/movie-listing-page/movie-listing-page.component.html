@@ -1,0 +1,6 @@
+<app-search (searchEvent)="onSearch($event)" class="search"></app-search>
+<app-filter (selectedGenresChange)="onSelectedGenresChange($event)"></app-filter>
+<app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+<div class="text-centre" *ngIf="showLoadButton">
+    <button mat-button color="accent" (click)="loadMoreMovies()">Load More</button>
+</div>

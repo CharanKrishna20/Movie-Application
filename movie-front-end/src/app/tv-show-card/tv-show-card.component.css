@@ -1,0 +1,53 @@
+.show-card {
+    /* width: 280px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: inline-block;
+    flex-direction: column; */
+    position: relative; /* Ensure position context for absolute positioning of the favorite icon */
+    width: 280px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: inline-block;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    }
+  
+  
+  .show-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  img {
+    width: 280px; 
+    height: 200px;
+    border-radius: 20px;
+  }
+  
+  .mat-card-content {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .mat-card-title {
+   
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .favorite-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: purple; /* Change the color as needed */
+    font-size: 24px; /* Adjust the font size as needed */
+    z-index: 1; /* Set a higher z-index value to ensure it's above other elements */
+}
+.orange-star::before {
+  content: '★';
+  color: orange;
+}

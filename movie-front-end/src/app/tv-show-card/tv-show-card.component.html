@@ -1,0 +1,11 @@
+<mat-card class="show-card" routerLink="/tvshow-description-page/{{tvShow.tvShowId}}">
+    <!-- <mat-icon class="favorite-icon">favorite</mat-icon> -->
+    <img mat-card-image [src]="'http://localhost:8090/' + tvShow.showImagePath" alt="{{ tvShow.showTitle }}">
+
+    <mat-card-content>
+      <mat-card-title>{{ tvShow.showTitle }}</mat-card-title>
+      <p><strong>Release Year:</strong> {{ tvShow.releaseYear }}</p>
+      <p class="movie-rating"><i class="star" [ngClass]="{'orange-star':tvShow.showRating}"></i>{{tvShow.showRating}}/10</p>
+    </mat-card-content>
+
+  </mat-card>

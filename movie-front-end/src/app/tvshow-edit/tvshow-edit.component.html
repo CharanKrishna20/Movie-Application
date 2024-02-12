@@ -1,0 +1,89 @@
+<ng-container *ngIf="tvShow; else loadingTemplate">
+    <form (ngSubmit)="editTvShow()">
+        <mat-label><h2>Edit tv show</h2></mat-label>
+        <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>TV show Id</mat-label>
+              <input matInput type="text" [value]="tvShow.tvShowId" name="tvShowId" disabled>
+            </mat-form-field>
+          </div>
+          
+        <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Tv show Title</mat-label>
+                <input matInput type="text" [(ngModel)]="tvShow.showTitle" name="showTitle">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Release Year</mat-label>
+              <input matInput type="text" [(ngModel)]="tvShow.releaseYear" name="releaseYear">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Genre</mat-label>
+              <input matInput type="text" [(ngModel)]="tvShow.genre" name="genre">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Tv show Description</mat-label>
+              <textarea matInput [(ngModel)]="tvShow.showDescription" name="showDescription"></textarea>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Rating</mat-label>
+              <input matInput type="text" [(ngModel)]="tvShow.showRating" name="showRating">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Movie Director</mat-label>
+              <input matInput type="text" [(ngModel)]="tvShow.showDirector" name="movieDirector">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Movie Writers</mat-label>
+              <input matInput type="text" [(ngModel)]="tvShow.showWriters" name="movieWriters">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Trailer Link</mat-label>
+              <input matInput type="text" [(ngModel)]="tvShow.trailerLink" name="trailerLink">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Streaming On</mat-label>
+              <input matInput type="text" [(ngModel)]="tvShow.streamingOn" name="streamingOn">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Cast And Crew</mat-label>
+              <input matInput type="text" [(ngModel)]="tvShow.castAndCrew" name="castAndCrew">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Available Languages</mat-label>
+              <input matInput type="text" [(ngModel)]="tvShow.availableLanguages" name="availableLanguages">
+            </mat-form-field>
+          </div>
+         
+          <label for="file">Select Tv show Poster:</label>
+          <input type="file" id="file" name="file" (change)="onFileChange($event)">
+    
+          <button mat-raised-button color="primary" type="submit">save</button>
+    
+    </form>
+    </ng-container>
+    
+    <ng-template #loadingTemplate>
+      <p>Loading...</p>
+    </ng-template> 

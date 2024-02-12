@@ -1,0 +1,185 @@
+.body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+ 
+}
+
+.slider {
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 7);
+  animation: slideAnimation 100s linear infinite; /* Adjust the duration as needed */
+}
+
+.slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  14.285% {
+    transform: translateX(-250px);
+  }
+  28.57% {
+    transform: translateX(-500px);
+  }
+  42.855% {
+    transform: translateX(-750px);
+  }
+  57.14% {
+    transform: translateX(-1000px);
+  }
+  71.425% {
+    transform: translateX(-1250px);
+  }
+  85.71% {
+    transform: translateX(-1500px);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+img {
+  width: 100%;
+  transition: transform 5s;
+}
+
+img:hover {
+  transform: translateX(20px);
+}
+
+.slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+h1{
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  background-color:rgb(0, 0, 0);
+  padding: 5px;
+}
+
+
+/* Assuming you have a class named 'icon' for styling the mat-card */
+.icon {
+width: 100%;
+display: flex;
+color: white;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+background-color: #000000;
+}
+
+
+/* mat-icon {
+font-size: 50px;
+} */
+
+
+mat-card-content {
+padding: 25px;
+}
+#btn {
+ /* Set the initial background color to blue */
+color: white; /* Set the text color to white */
+transition: background-color 0.3s ease; /* Add a smooth transition effect */
+
+/* Hover style */
+&:hover {
+  background-color: #5c5c5c; /* Change the background color on hover */
+}
+}
+/*....................................................................................
+......................................................................................
+......................................................................................*/
+.carousel carousel-dark{
+height: 500px;
+width: auto;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+main {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+section {
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+font-size: 1.5rem;
+margin-bottom: 10px;
+}
+
+.card {
+display: flex;
+flex-direction: column;
+padding: 15px;
+border-radius: 5px;
+background-color: #fff;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+width: 100%;
+height: auto;
+object-fit: cover;
+border-radius: 5px;
+}
+
+.card-body {
+flex-grow: 1;
+padding: 10px;
+}
+
+.card-title {
+font-size: 1.2rem;
+margin-bottom: 5px;
+}
+
+.card-text {
+line-height: 1.5;
+color: #666;
+}
+
+a {
+color: #007bff;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}

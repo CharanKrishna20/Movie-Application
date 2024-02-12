@@ -1,0 +1,33 @@
+<header>
+  <div class="logo-container">
+      <p routerLink="/home"><img src="../../assets/Pictures/logo/logo3.PNG"></p></div>
+  <ul class="navigation">
+  
+    <li *ngIf="authservice.isLoggedInValue" > Hi, {{ loggedInUsername }}</li> 
+    
+     <li><a routerLink="/tvshows-page">Tv Shows</a></li>
+     <li><a routerLink="movie-listing-page">Movies</a></li>
+     <li><a routerLink="/wishlist" *ngIf="authservice.isLoggedInValue">My List</a></li>
+    
+     <!-- Display "Hi, [username]" when the user is logged in -->
+  
+  
+    <li>
+      <a routerLink="/login" *ngIf="!(authservice.isLoggedIn | async)">Login</a>
+      <a  *ngIf="(authservice.isLoggedIn | async)" (click)="userLogout()">Logout</a>
+      <ng-container *ngIf="authservice.isLoggedInValue">
+        <ng-container *ngIf="isUserSubscribed">
+          <!-- Show the image for subscribed users -->
+          <img class="prouser" src="../../assets/Pictures/logo/prouser.PNG" routerLink="/profile-page">
+        </ng-container>
+        <ng-container *ngIf="!isUserSubscribed">
+          <!-- Show the mat-icon for non-subscribed users -->
+          <img class="prouser" src="../../assets/Pictures/profile icon.png" routerLink="/profile-page">
+          <!-- <mat-icon class="icon" routerLink="/profile-page">person</mat-icon> -->
+        </ng-container>
+      </ng-container>
+  
+    </li>
+    </ul>
+    <div class="menu-btn" (click)="toggleMenu()">☰</div>
+    </header>

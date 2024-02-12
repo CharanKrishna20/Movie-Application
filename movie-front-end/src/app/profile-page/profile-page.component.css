@@ -1,0 +1,99 @@
+/* 
+.profile-details {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.profile-details h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+.form-group button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* profile.component.css */
+
+.profile-container {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #141414;
+  color: #fff;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+.subscription-details {
+  margin-top: 20px;
+}
+
+.subscription-details h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}

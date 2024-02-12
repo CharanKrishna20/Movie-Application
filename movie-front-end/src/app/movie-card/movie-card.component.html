@@ -1,0 +1,13 @@
+
+      <mat-card class="movie-card" routerLink="/movie-description-page/{{movie.movieId}}">
+        <!-- <mat-icon class="favorite-icon">favorite</mat-icon> -->
+        <img mat-card-image [src]="'http://localhost:8090/' + movie.movieImagePath" alt="{{ movie.movieTitle }}">
+
+        <mat-card-content>
+          <mat-card-title>{{ movie.movieTitle }}</mat-card-title>
+          <p><strong>Release Year:</strong> {{ movie.releaseYear }}</p>
+          <p class="movie-rating"><i class="star" [ngClass]="{'orange-star':movie.movieRating}"></i>{{movie.movieRating}}/10</p>
+        </mat-card-content>
+
+      </mat-card>
+ 

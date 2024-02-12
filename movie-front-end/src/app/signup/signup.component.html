@@ -1,0 +1,60 @@
+<div class="signup-form" [@bounce]="bounceState"> 
+  <mat-card class="mat-card" (@bounce.start)="startBounceAnimation()"> 
+    <mat-card-title class="title" (@bounce.done)="resetBounceAnimation()">Signup Here</mat-card-title>  
+    <mat-card-content>
+        <form [formGroup]="signupForm" (ngSubmit)="signupUser()">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>UserName</mat-label>
+            <input matInput type="text" formControlName="userName" placeholder="Enter your userName" required>
+            <mat-error *ngIf="signupForm.get('userName')?.hasError('required')">
+              UserName is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="userEmailId" placeholder="Enter your email" required>
+            <mat-error *ngIf="signupForm.get('userEmailId')?.hasError('required')">
+              Email is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput
+                   type="password"
+                   formControlName="password"
+                   placeholder="Enter your password"
+                   required
+                   >
+          
+            <!-- Password Errors -->
+            <mat-error *ngIf="signupForm.get('password')?.hasError('required')">
+              Password is required.
+            </mat-error>
+            <mat-error *ngIf="signupForm.get('password')?.hasError('minlength') && !signupForm.get('password')?.hasError('required')">
+              Password should be at least 8 characters long.
+            </mat-error>
+            <mat-error *ngIf="signupForm.get('password')?.hasError('pattern') && !signupForm.get('password')?.hasError('required') && !signupForm.get('password')?.hasError('minlength')">
+              Please choose a stronger password. Try a mix of letters, numbers, and symbols.
+            </mat-error>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password" formControlName="confirmPassword" placeholder="Confirm your password" required>
+            <mat-error *ngIf="signupForm.get('confirmPassword')?.hasError('required')">
+              Confirm Password required
+            </mat-error>
+            <mat-error *ngIf="signupForm.hasError('passwordMismatch')">
+              Passwords do not match.
+            </mat-error>
+          </mat-form-field>
+  
+          <button type="submit" mat-raised-button color="primary" [disabled]="!signupForm.valid || signupForm.hasError('passwordMismatch')">Sign Up</button>
+        </form>
+      </mat-card-content>
+      <p style="color: purple;" [@bounce]="bounceState">Already have an account? <a [routerLink]="['/login']">Login here</a></p>
+    </mat-card>
+  </div>
+  
+

@@ -1,0 +1,107 @@
+.form {
+   
+    max-width: 400px;
+    max-height: 600px; /* Set your desired height */
+    overflow-y: auto;
+    margin: auto;
+    padding: 0px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdfdff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.5s ease;
+  }
+
+  /* .edit-form{
+
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+  } */
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .form-field {
+    margin-top: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #2196F3;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 3px;
+    /* margin-top: 4px;  */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #2196F3; 
+  }
+  
+  button {
+    /* margin-top: 10px; */
+    /* padding: 10px; */
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1565C0;
+  }
+  @media screen and (max-width: 600px) {
+    .form {
+      width: 100%;
+      max-width: none;
+      /* max-height: calc(100vh - 50px) */
+    }
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* movie-edit.component.css */
+
+ .edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Optional: Center the form horizontally */
+}
+
+.form-field {
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width as needed */
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+button {
+  margin-top: 10px; /* Add some spacing between the form fields and the button */
+}
+
+
+

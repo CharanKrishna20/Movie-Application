@@ -1,0 +1,73 @@
+<div class="tvshow-container">
+    <mat-card>
+        <img mat-card-image  id="picture" [src]="'http://localhost:8090/' + tvshow.showImagePath" alt="{{ tvshow.showTitle }}">
+    </mat-card>
+     <mat-card-content class="movie-details">
+        <h3 class="movie-title">{{tvshow.showTitle}}
+            <button class="add-to-wishlist-button"   (click)="addShowToWishlist()">
+                <mat-icon>bookmark</mat-icon>
+            </button></h3>
+            <p class="movie-releaseYear">{{tvshow.releaseYear}}</p>
+        <div class="rating-section">
+            <p class="movie-rating"><i class="star" [ngClass]="{'orange-star':tvshow.showRating}"></i>{{tvshow.showRating}}/10</p>
+        </div>
+    
+        <div class="movie-info">
+            <div class="info-item">
+                <span class="info-label"></span>
+                <p class="movie-description">{{tvshow.showDescription}}</p>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Genre: </span>
+                <p class="info-content">{{tvshow.genre}}</p>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Director: </span>
+                <p class="info-content">{{tvshow.showDirector}}</p>
+            </div>
+            <div class="info-item">
+                <span class="info-label"> Writers: </span>
+            <p class="info-content">{{tvshow.showWriters}}</p>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Cast and Crew:</span>
+            <p>{{tvshow.castAndCrew}}</p>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Available Languages:</span>
+            <p>{{tvshow.availableLanguages}}</p>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Watch it on:</span>
+            <p class="icon-logo">
+               
+                <ng-container *ngFor="let service of tvshow.streamingOn" class="icon-logo">
+                    <img *ngIf="service === 'netflix'" src="../../assets/Pictures/logo/netflix.jpg" alt="Netflix Icon" class="streaming-icon">
+                    <img *ngIf="service === 'hotstar'" src="../../assets/Pictures/logo/hotstar.jpg" alt="Hotstar Icon" class="streaming-icon">
+                    <img *ngIf="service === 'hulu'" src="../../assets/Pictures/logo/hulu.jpg" alt="Hotstar Icon" class="streaming-icon">
+                    <img *ngIf="service === 'voot'" src="../../assets/Pictures/logo/voot.jpg" alt="Hotstar Icon" class="streaming-icon">
+                    <img *ngIf="service === 'prime'" src="../../assets/Pictures/logo/prime.jpg" alt="Prime Icon" class="streaming-icon">
+                    <!-- Add more conditions for other streaming services as needed -->
+                </ng-container>
+            </p>
+        </div>
+        <button *ngIf="authService.isLoggedInValue && isUserSubscribed" class="download-button" (click)="download()">Download</button>
+        <button class="add-review-button" (click)="openReviewDialog(tvshow.tvShowId)">Add Review</button>
+    
+            <h4>Reviews</h4>
+            <ul>
+                <!-- Use *ngFor to iterate through reviews and display each on a new line -->
+                <li *ngFor="let review of tvshow.showReviews">{{ review }}</li>
+            </ul>
+            
+            
+        </div>
+    </mat-card-content>
+    </div>
+    <div *ngIf="authService.isLoggedInValue && isUserSubscribed" class="info-item">
+            <iframe class="iframe" width="560" height="560" [src]="sanitizedTrailerLink" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    
+   
+   
+
